@@ -1,1 +1,2 @@
 # bdd_bookbot
+BookBot is my first Boot.dev project!
