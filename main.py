@@ -1,8 +1,8 @@
 import sys
 import string
 
-def open_book(book_path):
-    with open(book_path) as f:
+def open_book():
+    with open(sys.argv[1]) as f:
         file_contents = f.read()
     return file_contents
 
@@ -29,7 +29,7 @@ def print_report(word_count,char_count):
     for char in chars:
        print(f"The '{char}' character was found {char_count.get(char)} times")
     print("--- End report ---")
-book = sys.argv[1]
-wc = count_words(open_book(book))
-cc = count_char_instance(open_book(book))
+
+wc = count_words(open_book())
+cc = count_char_instance(open_book())
 print_report(wc,cc)
